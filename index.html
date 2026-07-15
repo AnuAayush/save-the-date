@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#2b2d55" />
+    <title>Anubhuti &amp; Aayush — Save the Date</title>
+    <meta
+      name="description"
+      content="Anubhuti & Aayush — Save the Date. 10 & 11 February 2027, Lalgarh Palace, Bikaner."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Anubhuti &amp; Aayush — Save the Date" />
+    <meta
+      property="og:description"
+      content="A little love story · 10 & 11 February 2027 · Lalgarh Palace, Bikaner"
+    />
+    <meta property="og:image" content="share.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23F3ECE0'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' fill='%23BFA057' text-anchor='middle'%3EA%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Marcellus&family=Parisienne&family=Noto+Serif+Devanagari:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- critical: cover the card with an opaque envelope from the first paint so no
+         card content (sun/moon, buttons) flashes before the main stylesheet loads -->
+    <style>
+      #device { position: relative; }
+      #envelope { position: absolute; inset: 0; z-index: 30; background-color: #8c789f; }
+      #card { visibility: hidden; }
+      #card.is-shown { visibility: visible; }
+      #sound { opacity: 0; }
+    </style>
+    <script type="module" crossorigin src="./assets/index-BTyDb5Ls.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-B2LF2lwa.css">
+  </head>
+  <body>
+    <div class="stage">
+      <div class="device" id="device">
+        <main id="card" class="card" aria-hidden="true">
+          <!-- PAGE 1: the love story (2.5D depth beats + depth-aware petals) -->
+          <section class="story" id="story">
+            <div class="sb-stage" id="sb-stage"><canvas id="sb-gl" class="sb-gl"></canvas></div>
+            <div class="sb-vignette" aria-hidden="true"></div>
+            <div class="sb-caption" id="sb-caption">Where it all began</div>
+            <canvas id="card-petals" class="card-petals" aria-hidden="true"></canvas>
+            <button id="story-next" class="story-next" type="button" aria-label="Continue">
+              <span class="story-next__label">Our story continues...</span>
+              <span class="story-next__chev" aria-hidden="true"></span>
+            </button>
+          </section>
+
+          <!-- PAGE 2: the announcement -->
+          <section class="panel panel--announce" id="announce" data-paper="2">
+            <div class="announce" data-reveal>
+              <p class="announce__verse">From the promise we made nearly a decade ago,<br />to the vows we are ready to share&hellip;</p>
+              <h1 class="names names--announce">
+                <span class="names__n">Anubhuti</span>
+                <span class="names__amp">&amp;</span>
+                <span class="names__n">Aayush</span>
+              </h1>
+              <div class="announce__sub">are getting married</div>
+            </div>
+          </section>
+
+          <!-- PAGE 4: Lalgarh — day / night + the dates -->
+          <section class="hero" id="hero">
+            <canvas id="hero-gl" class="hero__gl" aria-hidden="true"></canvas>
+            <div class="fireflies" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <canvas class="fw-canvas" aria-hidden="true"></canvas>
+            <button
+              id="daynight"
+              class="daynight"
+              type="button"
+              role="switch"
+              aria-checked="false"
+              aria-label="Toggle day and night"
+            >
+              <span class="daynight__icon daynight__sun" aria-hidden="true"></span>
+              <span class="daynight__knob"></span>
+              <span class="daynight__icon daynight__moon" aria-hidden="true"></span>
+            </button>
+            <div class="hero__copy" data-reveal>
+              <div class="kicker kicker--flanked"><span>Save the Date</span></div>
+              <div class="hero__date">10 <span class="amp">&amp;</span> 11 February</div>
+              <div class="hero__year">Two Thousand Twenty-Seven</div>
+              <div class="hero__flourish" aria-hidden="true"></div>
+              <div class="hero__venue">
+                <span class="hero__venue-name">Lalgarh Palace</span>
+                <span class="hero__venue-place">Bikaner &middot; Rajasthan</span>
+              </div>
+            </div>
+            <div class="scroll-cue" aria-hidden="true"><span></span></div>
+          </section>
+
+          <!-- PAGE 5: countdown at the top, couple portrait placed below -->
+          <section class="panel panel--count" data-paper="1">
+            <canvas class="count-petals" aria-hidden="true"></canvas>
+            <div class="count__inner">
+              <h2 class="panel__title">Countdown</h2>
+              <div class="panel__sub">to the day we tie the knot</div>
+              <div class="countdown" id="countdown" aria-live="polite">
+                <div class="cd"><span class="cd__num" data-cd="days">—</span><span class="cd__label">Days</span></div>
+                <div class="cd"><span class="cd__num" data-cd="hours">—</span><span class="cd__label">Hours</span></div>
+                <div class="cd"><span class="cd__num" data-cd="mins">—</span><span class="cd__label">Minutes</span></div>
+                <div class="cd"><span class="cd__num" data-cd="secs">—</span><span class="cd__label">Seconds</span></div>
+              </div>
+            </div>
+            <div class="flourish" aria-hidden="true"></div>
+            <figure class="count__portrait">
+              <div class="couple__stage"><img class="couple__img" src="tex/countdown-portrait.png" alt="Anubhuti and Aayush" /></div>
+            </figure>
+          </section>
+
+          <!-- PAGE 6: formal invitation to follow -->
+          <footer class="panel panel--footer" data-paper="last">
+            <div class="foot-names" data-reveal>Goyal's &amp; Upadhyay's</div>
+            <div class="foot-note" data-reveal>Formal invitation to follow</div>
+          </footer>
+        </main>
+
+        <!-- ENVELOPE -->
+        <section id="envelope" class="envelope" role="button" tabindex="0" aria-label="Tap to open">
+          <div class="env__flaps" aria-hidden="true"></div>
+          <div class="env__seams" aria-hidden="true"></div>
+          <div class="env__seal">
+            <div class="env__mono">
+              <span class="env__dev">अ</span>
+            </div>
+          </div>
+          <div class="env__hint">Tap to open</div>
+        </section>
+
+        <button id="sound" class="control control--sound" type="button" aria-label="Play music">
+          <span class="control__icon control__icon--muted"></span>
+        </button>
+      </div>
+    </div>
+
+  </body>
+</html>
